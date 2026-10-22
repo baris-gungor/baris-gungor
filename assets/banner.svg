@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="320" viewBox="0 0 1280 320">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1020"/>
+      <stop offset="1" stop-color="#161b38"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#60a5fa"/>
+      <stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#ffffff" stroke-opacity="0.04"/>
+    </pattern>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+  </defs>
+  <rect width="1280" height="320" rx="18" fill="url(#bg)"/>
+  <rect width="1280" height="320" rx="18" fill="url(#grid)"/>
+  <g font-family="'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif">
+    <text x="72" y="118" fill="#94a3b8" font-size="20" letter-spacing="4">HI, I'M</text>
+    <text x="72" y="178" fill="#f8fafc" font-size="58" font-weight="700">Barış Güngör</text>
+    <rect x="72" y="198" width="96" height="4" rx="2" fill="url(#accent)"/>
+    <text x="72" y="238" fill="#cbd5e1" font-size="24">Backend &amp; AI Engineer</text>
+    <text x="72" y="270" fill="#64748b" font-size="18">Node.js · Python · event-driven systems · LLM / RAG pipelines</text>
+  </g>
+
+  <g>
+    <rect x="700" y="46" width="520" height="228" rx="12" fill="#0f1426" stroke="#2a3150"/>
+    <path d="M700 58 a12 12 0 0 1 12 -12 h496 a12 12 0 0 1 12 12 v22 h-520 z" fill="#161c33"/>
+    <circle cx="720" cy="63" r="5" fill="#f87171"/>
+    <circle cx="738" cy="63" r="5" fill="#fbbf24"/>
+    <circle cx="756" cy="63" r="5" fill="#34d399"/>
+    <text x="960" y="68" fill="#64748b" font-family="Consolas, 'SF Mono', Menlo, 'Courier New', monospace" font-size="12" text-anchor="middle">baris@github: ~</text>
+  </g>
+  <g font-family="Consolas, 'SF Mono', Menlo, 'Courier New', monospace" font-size="15">
+    <text x="724" y="112" xml:space="preserve"><tspan fill="#34d399">➜ </tspan><tspan fill="#60a5fa">~ </tspan><tspan fill="#cbd5e1">whoami</tspan></text>
+    <text x="724" y="131" xml:space="preserve"><tspan fill="#cbd5e1">baris · backend &amp; ai engineer</tspan></text>
+    <text x="724" y="169" xml:space="preserve"><tspan fill="#34d399">➜ </tspan><tspan fill="#60a5fa">~ </tspan><tspan fill="#cbd5e1">cat focus.yml</tspan></text>
+    <text x="724" y="188" xml:space="preserve"><tspan fill="#a78bfa">backend:   </tspan><tspan fill="#cbd5e1">nestjs, fastify, fastapi</tspan></text>
+    <text x="724" y="207" xml:space="preserve"><tspan fill="#a78bfa">messaging: </tspan><tspan fill="#cbd5e1">rabbitmq, redis, webhooks</tspan></text>
+    <text x="724" y="226" xml:space="preserve"><tspan fill="#a78bfa">ai:        </tspan><tspan fill="#cbd5e1">rag, embeddings, qdrant</tspan></text>
+    <text x="724" y="245" xml:space="preserve"><tspan fill="#a78bfa">ships_to:  </tspan><tspan fill="#cbd5e1">docker, kubernetes, argo cd</tspan></text>
+    <text x="724" y="264" xml:space="preserve"><tspan fill="#34d399">➜ </tspan><tspan fill="#60a5fa">~ </tspan><tspan fill="#64748b"></tspan></text>
+  </g>
+  <rect x="764" y="251" width="9" height="17" fill="#a78bfa" opacity="0.85"/>
+</svg>
