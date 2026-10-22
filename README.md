@@ -87,19 +87,6 @@ legacy code to 80%, refactoring old codebases, and CI/CD with Jenkins and Argo C
   </tr>
 </table>
 
-### A typical system I work on
-
-```mermaid
-flowchart LR
-    CH["Channels<br/>WhatsApp · Telegram · Teams<br/>Slack · Facebook · Discord · Web"] -->|webhooks| CM[Channel manager]
-    CM -->|publish| Q[(RabbitMQ<br/>retry · DLQ · priority · delay)]
-    Q --> BOT[Bot engine<br/>flows · intents · FAQ]
-    BOT -->|LLM step| LLM[LLM providers]
-    BOT -->|retrieve| RAG[RAG service]
-    DOC[Documents] --> ING[Parse → clean → chunk<br/>→ embed → enrich] --> V[(Qdrant)]
-    RAG --> V
-    BOT --- DB[(PostgreSQL + Redis<br/>tenant-scoped)]
-```
 
 ## 🛠️ Tech stack
 
