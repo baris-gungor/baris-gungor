@@ -126,19 +126,22 @@ money, end-to-end tests against a real PostgreSQL, and a bilingual Vue 3 dashboa
 </td>
     <td width="50%" valign="top">
 
-### [📄 doc-ocr-llm-analyzer](https://github.com/baris-gungor/doc-ocr-llm-analyzer)
+### [📚 rag](https://github.com/baris-gungor/rag)
 
-Turns scanned Turkish trade-registry gazette PDFs into structured company data with one HTTP call: Turkish
-OCR, rule-based splitting of the many announcements printed on one page, company filtering, heading-aware
-chunking, then per-chunk LLM extraction rendered as an HTML report.
+**Can I check where the answer came from?** Ask your PDF, Markdown and text files a question in English or
+Turkish and get an answer in the same language, where every claim carries a numbered citation that opens the
+exact file, page and passage. If the answer is not in the documents, it says so.
 
-The LLM layer is one abstract base class with retries and exponential backoff on rate limits; Groq,
-OpenRouter, Hugging Face and Together AI are thin subclasses chosen by a single environment variable.
+Files are parsed, chunked by tokens and embedded into **PostgreSQL + pgvector** (one partial HNSW index per
+embedding size), grouped into collections with their own models. OpenAI and local **Ollama** sit behind one
+provider layer, a retrieval panel shows every passage found and whether it was used, and an eval set
+measures retrieval quality. Vue 3 interface, API keys stored encrypted.
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
-![Tesseract](https://img.shields.io/badge/Tesseract-4B8BBE?style=flat-square)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/pgvector-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![Ollama](https://img.shields.io/badge/Ollama-000000?style=flat-square&logo=ollama&logoColor=white)
+![Vue](https://img.shields.io/badge/Vue%203-4FC08D?style=flat-square&logo=vuedotjs&logoColor=white)
 
 </td>
   </tr>
